@@ -6,6 +6,11 @@ const StudentApi = {
     const response = await axios.get(`${baseURL}/all`);
     return response.data;
   },
+
+  getStudentGroups: async () => {
+    const response = await axios.get(`${baseURL}/groups`);
+    return response.data;
+  },
 };
 
 export default StudentApi;

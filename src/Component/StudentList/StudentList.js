@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import StudentApi from '../api/student';
+import StudentApi from '../../api/student';
 import './StudentList.css';
 
 function StudentList() {
