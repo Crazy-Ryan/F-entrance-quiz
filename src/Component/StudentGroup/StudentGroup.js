@@ -8,7 +8,6 @@ function StudentGroup() {
   useEffect(() => {
     StudentApi.getStudentGroups().then((groups) => {
       setStudentsGroup({ groups });
-      console.log(groups);
     });
   }, []);
 
