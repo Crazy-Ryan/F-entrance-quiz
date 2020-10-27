@@ -18,8 +18,15 @@ function StudentGroup() {
       <div className="student-groups">
         {studentsGroup.groups &&
           studentsGroup.groups.map((group) => (
-            <div className="group-name" key={group.groupName}>
-              {group.groupName}
+            <div className="student-group" key={group.groupName}>
+              <h2 className="group-name">{group.groupName}</h2>
+              <div className="student-list">
+                {group.studentsInThisGroup.map((student) => (
+                  <div className="student-box" key={student.id}>
+                    {student.id}. {student.name}
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
       </div>

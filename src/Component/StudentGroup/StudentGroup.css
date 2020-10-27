@@ -1,0 +1,18 @@
+.student-list {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-row-gap: 5px;
+  grid-column-gap: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.student-box {
+  background-color: #eeeeee;
+}
+
+.group-name {
+  text-align: center;
+  background-color: #393e46;
+  color: #eeeeee;
+}
