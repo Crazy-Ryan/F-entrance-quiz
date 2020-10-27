@@ -1,19 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import StudentApi from '../../api/student';
 import './StudentGroup.css';
 
 function StudentGroup() {
   const [studentsGroup, setStudentsGroup] = useState({});
 
-  useEffect(() => {
+  const handleClick = () => {
     StudentApi.getStudentGroups().then((groups) => {
       setStudentsGroup({ groups });
     });
-  }, []);
-
+  };
   return (
     <div className="student-overview">
       <h1>分组列表</h1>
+      <button onClick={handleClick} type="button">
+        分组学员
+      </button>
       <div className="student-groups">
         {studentsGroup.groups &&
           studentsGroup.groups.map((group) => (
