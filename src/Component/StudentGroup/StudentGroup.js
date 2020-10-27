@@ -12,10 +12,12 @@ function StudentGroup() {
   };
   return (
     <div className="student-overview">
-      <h1>分组列表</h1>
-      <button onClick={handleClick} type="button">
-        分组学员
-      </button>
+      <div className="grouping-row">
+        <h1>分组列表</h1>
+        <button className="grouping-button" onClick={handleClick} type="button">
+          分组学员
+        </button>
+      </div>
       <div className="student-groups">
         {studentsGroup.groups &&
           studentsGroup.groups.map((group) => (

@@ -16,3 +16,16 @@
   background-color: #393e46;
   color: #eeeeee;
 }
+
+.grouping-button {
+  height: 40px;
+  background-color: #ea5455;
+  color: #eeeeee;
+  font-size: 20px;
+}
+
+.grouping-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
