@@ -1,27 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import StudentApi from '../api/student';
-import 'babel-polyfill';
+import './StudentList.css';
 
 function StudentList() {
-  const arr = ['one', 'two'];
-  const [students, setStudents] = useState({ all: arr });
+  const [students, setStudents] = useState({});
 
   useEffect(() => {
     StudentApi.getAllStudents().then((allStudents) => {
-      console.log(allStudents);
       setStudents({ all: allStudents });
     });
-  });
+  }, []);
 
   return (
-    <>
-      {students.all.map((student) => (
-        <div>
-          {student.id}
-          {student.name}
-        </div>
-      ))}
-    </>
+    <div className="student-overview">
+      <h1>学员列表</h1>
+      <div className="student-list">
+        {students.all &&
+          students.all.map((student) => (
+            <div className="student-box" key={student.id}>
+              {student.id}. {student.name}
+            </div>
+          ))}
+      </div>
+    </div>
   );
 }
 

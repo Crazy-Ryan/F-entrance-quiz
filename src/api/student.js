@@ -1,6 +1,5 @@
 import axios from 'axios';
 import baseURL from './base';
-// import 'babel-polyfill';
 
 const StudentApi = {
   getAllStudents: async () => {
